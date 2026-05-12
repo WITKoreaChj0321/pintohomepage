@@ -256,6 +256,35 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-delay-1{transition-delay:.1s}.reveal-delay-2{transition-delay:.2s}.reveal-delay-3{transition-delay:.3s}
 
+/* GALLERY */
+.gallery{background:var(--bg);padding:9rem 8%;border-top:1px solid var(--border)}
+.gallery-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
+.gallery-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.2;color:var(--ink);letter-spacing:-.01em}
+.gallery-header p{font-size:.85rem;color:var(--ink2);max-width:260px;line-height:1.75;text-align:right}
+.gallery-bento{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem}
+.gallery-item{position:relative;overflow:hidden;border-radius:.625rem;background:var(--bg3);border:1px solid var(--border);cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(0.16,1,0.3,1)}
+.gallery-item:hover img{transform:scale(1.04)}
+.placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
+.placeholder .ph-icon{color:var(--border2)}
+.placeholder .ph-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.placeholder .ph-path{font-size:.62rem;color:var(--ink3);opacity:.55;font-family:monospace;margin-top:.15rem}
+.gallery-item.has-img .placeholder{display:none}
+.gi-1,.gi-2,.gi-3,.gi-4,.gi-5,.gi-6,.gi-7,.gi-8,.gi-9,.gi-10{aspect-ratio:5/7}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,20,.5) 0%,transparent 60%);opacity:0;transition:opacity .4s cubic-bezier(0.16,1,0.3,1);display:flex;align-items:flex-end;padding:1.25rem}
+.gallery-overlay span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(10,8,6,.93);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(0.16,1,0.3,1);backdrop-filter:blur(10px)}
+.lightbox.open{opacity:1;pointer-events:all}
+.lightbox-img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:.5rem}
+.lightbox-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;width:2.5rem;height:2.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s cubic-bezier(0.16,1,0.3,1)}
+.lightbox-close:hover{background:rgba(255,255,255,.2)}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;width:3rem;height:3rem;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s cubic-bezier(0.16,1,0.3,1)}
+.lb-nav:hover{background:rgba(255,255,255,.2)}
+.lb-prev{left:1.5rem}.lb-next{right:1.5rem}
+@media(max-width:960px){.gallery-bento{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.gallery-bento{grid-template-columns:repeat(2,1fr)}}
+
 /* RESPONSIVE */
 @media(max-width:960px){.hero{grid-template-columns:1fr}.hero-image{aspect-ratio:865/566;width:100%}.concept{grid-template-columns:1fr;gap:3rem}.concept-label{position:static;font-size:3.5rem}.services-split{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr;gap:2rem}.steps::before{display:none}.location-inner{grid-template-columns:1fr}.naver-booking-inner{grid-template-columns:1fr}footer{grid-template-columns:1fr;gap:3rem}.nav-menu{display:none}}
 @media(max-width:600px){.notice-grid{grid-template-columns:1fr}.services-header{flex-direction:column;align-items:flex-start}.services-note{text-align:left;border-right:none;padding-right:0}.cta-band{flex-direction:column;text-align:center}.footer-links-grid{grid-template-columns:1fr 1fr}.floating-wrap{right:1rem;bottom:1.25rem}.price-group{padding:1.75rem 1.25rem 1.5rem}.price-row{grid-template-columns:4.5rem auto;grid-template-rows:auto auto;row-gap:.15rem}.price-tier{grid-column:1;grid-row:1}.price-val{grid-column:2;grid-row:1;text-align:right}.price-desc{grid-column:1/-1;grid-row:2;font-size:.7rem;padding-left:.1rem}}
@@ -267,6 +296,7 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 <nav>
   <ul class="nav-menu">
     <li><a href="#services">요금</a></li>
+    <li><a href="#gallery">갤러리</a></li>
     <li><a href="#booking">예약</a></li>
     <li><a href="#howto">이용안내</a></li>
     <li><a href="#location">오시는길</a></li>
@@ -636,6 +666,77 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
   </div>
 </section>
 
+<!-- GALLERY -->
+<section id="gallery" class="gallery">
+  <div class="gallery-header reveal">
+    <div>
+      <span class="section-tag">Studio Gallery</span>
+      <h2>핀토의<br>공간을 만나보세요</h2>
+    </div>
+    <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
+  </div>
+  <div class="gallery-bento">
+    <div class="gallery-item gi-1 reveal" data-src="images/gallery-01.jpg" onclick="openLightbox(0)">
+      <img src="images/gallery-01.jpg" alt="핀토 스튜디오 실내" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span><span class="ph-label">스튜디오 메인샷</span></div>
+      <div class="gallery-overlay"><span>Studio Interior</span></div>
+    </div>
+    <div class="gallery-item gi-2 reveal reveal-delay-1" data-src="images/gallery-02.jpg" onclick="openLightbox(1)">
+      <img src="images/gallery-02.jpg" alt="핀토 스튜디오 촬영 공간" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span><span class="ph-label">촬영 공간</span></div>
+      <div class="gallery-overlay"><span>Shooting Space</span></div>
+    </div>
+    <div class="gallery-item gi-3 reveal" data-src="images/gallery-03.jpg" onclick="openLightbox(2)">
+      <img src="images/gallery-03.jpg" alt="핀토 스튜디오 소품" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">소품 · 배경</span></div>
+      <div class="gallery-overlay"><span>Props</span></div>
+    </div>
+    <div class="gallery-item gi-4 reveal reveal-delay-1" data-src="images/gallery-04.jpg" onclick="openLightbox(3)">
+      <img src="images/gallery-04.jpg" alt="핀토 스튜디오 탈의실" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">탈의실</span></div>
+      <div class="gallery-overlay"><span>Dressing Room</span></div>
+    </div>
+    <div class="gallery-item gi-5 reveal reveal-delay-2" data-src="images/gallery-05.jpg" onclick="openLightbox(4)">
+      <img src="images/gallery-05.jpg" alt="핀토 스튜디오 분위기" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">공간 분위기</span></div>
+      <div class="gallery-overlay"><span>Atmosphere</span></div>
+    </div>
+    <div class="gallery-item gi-6 reveal" data-src="images/gallery-06.jpg" onclick="openLightbox(5)">
+      <img src="images/gallery-06.jpg" alt="핀토 스튜디오 촬영 샘플" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span><span class="ph-label">촬영 샘플</span></div>
+      <div class="gallery-overlay"><span>Sample Shot</span></div>
+    </div>
+    <div class="gallery-item gi-7 reveal reveal-delay-1" data-src="images/gallery-07.jpg" onclick="openLightbox(6)">
+      <img src="images/gallery-07.jpg" alt="핀토 스튜디오 전경" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span><span class="ph-label">스튜디오 전경</span></div>
+      <div class="gallery-overlay"><span>Full Studio View</span></div>
+    </div>
+    <div class="gallery-item gi-8 reveal" data-src="images/gallery-08.jpg" onclick="openLightbox(7)">
+      <img src="images/gallery-08.jpg" alt="핀토 스튜디오 촬영 공간" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">촬영 공간</span></div>
+      <div class="gallery-overlay"><span>Studio Space</span></div>
+    </div>
+    <div class="gallery-item gi-9 reveal reveal-delay-1" data-src="images/gallery-09.jpg" onclick="openLightbox(8)">
+      <img src="images/gallery-09.jpg" alt="핀토 스튜디오 분위기" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">스튜디오 분위기</span></div>
+      <div class="gallery-overlay"><span>Atmosphere</span></div>
+    </div>
+    <div class="gallery-item gi-10 reveal reveal-delay-2" data-src="images/gallery-10.jpg" onclick="openLightbox(9)">
+      <img src="images/gallery-10.jpg" alt="핀토 스튜디오 인테리어" loading="lazy" onerror="this.style.display='none'">
+      <div class="placeholder"><span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span><span class="ph-label">스튜디오 인테리어</span></div>
+      <div class="gallery-overlay"><span>Interior Detail</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()"><span class="iconify" data-icon="solar:close-bold"></span></button>
+  <button class="lb-nav lb-prev" onclick="event.stopPropagation();moveLight(-1)"><span class="iconify" data-icon="solar:arrow-left-bold"></span></button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lb-nav lb-next" onclick="event.stopPropagation();moveLight(1)"><span class="iconify" data-icon="solar:arrow-right-bold"></span></button>
+</div>
+
 <!-- CTA BAND -->
 <section class="cta-band">
   <h2 class="reveal">소중한 오늘을<br><em>기록하세요</em></h2>
@@ -710,6 +811,36 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 
 
 
+
+  // 라이트박스
+  const galleryItems = document.querySelectorAll('.gallery-item[data-src]');
+  let currentIdx = 0;
+  const lbEl = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+
+  function openLightbox(idx) {
+    currentIdx = idx;
+    const src = galleryItems[idx]?.dataset.src;
+    if(!src) return;
+    lbImg.src = src;
+    lbEl.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(e) {
+    if(e && e.target !== lbEl && !e.target.classList.contains('lightbox-close')) return;
+    lbEl.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function moveLight(dir) {
+    currentIdx = (currentIdx + dir + galleryItems.length) % galleryItems.length;
+    lbImg.src = galleryItems[currentIdx]?.dataset.src || '';
+  }
+  document.addEventListener('keydown', e => {
+    if(!lbEl.classList.contains('open')) return;
+    if(e.key === 'Escape') { lbEl.classList.remove('open'); document.body.style.overflow=''; }
+    if(e.key === 'ArrowLeft') moveLight(-1);
+    if(e.key === 'ArrowRight') moveLight(1);
+  });
 
   // 스크롤 reveal
   const els = document.querySelectorAll('.reveal');
