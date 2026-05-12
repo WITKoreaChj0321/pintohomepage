@@ -179,7 +179,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .info-value strong{color:var(--ink);font-weight:500}
 .location-actions{display:flex;gap:.75rem;flex-wrap:wrap}
 .location-map{border:1px solid var(--border);border-radius:.75rem;overflow:hidden;height:380px}
-.location-map{border:1px solid var(--border);border-radius:.75rem;overflow:hidden;height:380px;position:relative}
+
 .map-pin{font-size:3rem;opacity:.3;margin-bottom:.75rem}
 .map-placeholder p{font-family:'Cormorant Garamond',serif;font-size:.9rem;letter-spacing:.08em;color:var(--ink3);line-height:1.8}
 
@@ -563,10 +563,10 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
       </div>
     </div>
     <div class="location-map reveal reveal-delay-1">
-      <div style="width:100%;height:280px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.875rem;border-radius:.75rem 0.75rem 0 0;">
-        <span class="iconify" data-icon="solar:map-point-bold" style="font-size:2.5rem;color:var(--gold);opacity:.6"></span>
-        <p style="font-family:Pretendard,sans-serif;font-size:.82rem;color:var(--ink2);text-align:center;line-height:1.7;word-break:keep-all">대구광역시 달성군 유가읍<br>테크노중앙대로 254 804호</p>
-      </div>
+      <iframe src="https://www.google.com/maps?q=35.7748,128.4383&z=17&output=embed&hl=ko" width="100%" height="320" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="핀토 스튜디오 위치"></iframe>
+
+
+
       <a href="https://naver.me/G3812qwJ" target="_blank" class="map-naver-btn">
         <span class="iconify" data-icon="solar:map-point-bold" style="font-size:1.1rem"></span>
         네이버 지도에서 보기
