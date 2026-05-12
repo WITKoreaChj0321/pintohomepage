@@ -563,7 +563,10 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
       </div>
     </div>
     <div class="location-map reveal reveal-delay-1">
-      <div id="naver-map" style="width:100%;height:340px;"></div>
+      <div style="width:100%;height:280px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.875rem;border-radius:.75rem 0.75rem 0 0;">
+        <span class="iconify" data-icon="solar:map-point-bold" style="font-size:2.5rem;color:var(--gold);opacity:.6"></span>
+        <p style="font-family:Pretendard,sans-serif;font-size:.82rem;color:var(--ink2);text-align:center;line-height:1.7;word-break:keep-all">대구광역시 달성군 유가읍<br>테크노중앙대로 254 804호</p>
+      </div>
       <a href="https://naver.me/G3812qwJ" target="_blank" class="map-naver-btn">
         <span class="iconify" data-icon="solar:map-point-bold" style="font-size:1.1rem"></span>
         네이버 지도에서 보기
@@ -893,23 +896,23 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
   </a>
 </div>
 
-<!-- 네이버 지도 JS API (ncpClientId: console.ncloud.com에서 발급) -->
-<script type="text/javascript"
-  src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_NAVER_MAP_CLIENT_ID">
-</script>
+
+
+
+
 <script>
   function openNaverTalk() {
     window.open('https://naver.me/G3812qwJ', '_blank');
   }
 
-  window.addEventListener('load', function() {
-    if (typeof naver === 'undefined' || !naver.maps) return;
-    var mapEl = document.getElementById('naver-map');
-    if (!mapEl) return;
-    var coords = new naver.maps.LatLng(35.7748, 128.4383);
-    var map = new naver.maps.Map(mapEl, { center: coords, zoom: 17 });
-    new naver.maps.Marker({ position: coords, map: map, title: 'PINTO 핀토 사진관' });
-  });
+
+
+
+
+
+
+
+
   // 갤러리 이미지 로드 체크 — 이미지가 있으면 has-img 클래스 추가
   document.querySelectorAll('.gallery-item img').forEach(img => {
     if(img.complete && img.naturalWidth > 0) img.closest('.gallery-item').classList.add('has-img');
