@@ -108,14 +108,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .services-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:5rem;gap:2rem}
 .services-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:300;line-height:1.1;color:var(--ink);letter-spacing:-.02em}
 .services-note{font-size:.82rem;color:var(--ink2);max-width:280px;line-height:1.9;text-align:right;border-right:1px solid var(--border2);padding-right:1.5rem}
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
 .service-card{background:var(--bg);padding:2.5rem 2rem;transition:background .4s cubic-bezier(0.16,1,0.3,1),box-shadow .4s cubic-bezier(0.16,1,0.3,1);position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(160,120,64,.1)}
 .service-card::before{content:'';position:absolute;inset:6px;border:1px solid rgba(160,120,64,.06);border-radius:.25rem;pointer-events:none;transition:border-color .4s}
 .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold2));transform:scaleX(0);transition:transform .5s cubic-bezier(0.16,1,0.3,1);transform-origin:left}
 .service-card:hover{background:var(--bg3);box-shadow:inset 0 0 0 1px rgba(160,120,64,.2),0 8px 32px rgba(160,120,64,.08)}
 .service-card:hover::before{border-color:rgba(160,120,64,.14)}
 .service-card:hover::after{transform:scaleX(1)}
-.service-number{font-family:'Cormorant Garamond',serif;font-size:.85rem;letter-spacing:.12em;color:var(--gold);margin-bottom:1.5rem;display:block}
+.service-number{font-family:'Cormorant Garamond',serif;font-size:1.18rem;letter-spacing:.12em;color:var(--gold);margin-bottom:1.5rem;display:block}
 .service-card h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--ink);line-height:1.15;margin-bottom:.6rem}
 .service-sub{font-size:.78rem;color:var(--ink2);margin-bottom:1.25rem;line-height:1.75}
 .service-detail{border-top:1px solid var(--border);padding-top:1rem;margin-top:1rem}
@@ -449,6 +449,66 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
         <li>원본 전체 무료</li>
       </ul>
       <div class="service-price"><span class="price-amount">85,000</span><span class="price-unit">원~</span></div>
+      <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-number">05</span>
+      <h3>5인<br>촬영</h3>
+      <p class="service-sub">단체 · 가족 사진</p>
+      <ul class="service-detail">
+        <li>촬영 시간 50분</li>
+        <li>인화 5장 포함</li>
+        <li>원본 전체 무료</li>
+      </ul>
+      <div class="service-price"><span class="price-amount">105,000</span><span class="price-unit">원~</span></div>
+      <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-number">06</span>
+      <h3>6인<br>촬영</h3>
+      <p class="service-sub">단체 · 가족 사진</p>
+      <ul class="service-detail">
+        <li>촬영 시간 50분</li>
+        <li>인화 6장 포함</li>
+        <li>원본 전체 무료</li>
+      </ul>
+      <div class="service-price"><span class="price-amount">125,000</span><span class="price-unit">원~</span></div>
+      <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-number">07</span>
+      <h3>7인<br>촬영</h3>
+      <p class="service-sub">대가족 · 단체 사진</p>
+      <ul class="service-detail">
+        <li>촬영 시간 50분</li>
+        <li>인화 7장 포함</li>
+        <li>원본 전체 무료</li>
+      </ul>
+      <div class="service-price"><span class="price-amount">145,000</span><span class="price-unit">원~</span></div>
+      <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-number">08</span>
+      <span class="service-badge">프리미엄</span>
+      <h3>작가촬영<br>가족사진</h3>
+      <p class="service-sub">전문 작가 동행 촬영</p>
+      <ul class="service-detail">
+        <li>작가 동행 촬영</li>
+        <li>원본 전체 무료</li>
+      </ul>
+      <div class="service-price"><span class="price-amount">250,000</span><span class="price-unit">원~</span></div>
+      <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-number">09</span>
+      <span class="service-badge">프리미엄</span>
+      <h3>작가촬영<br>대가족</h3>
+      <p class="service-sub">전문 작가 동행 촬영</p>
+      <ul class="service-detail">
+        <li>작가 동행 촬영</li>
+        <li>원본 전체 무료</li>
+      </ul>
+      <div class="service-price"><span class="price-amount">350,000</span><span class="price-unit">원~</span></div>
       <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="service-naver-btn"><span class="iconify" data-icon="solar:calendar-bold"></span> 네이버 예약</a>
     </div>
   </div>
