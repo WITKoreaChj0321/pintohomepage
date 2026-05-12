@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
@@ -33,8 +33,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* HERO */
 .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;padding-top:5rem;background:var(--bg);align-items:center}
-.hero-text{display:flex;flex-direction:column;justify-content:center;padding:6rem 8% 6rem 5%;background:var(--bg)}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;opacity:0;animation:fadeUp .8s cubic-bezier(0.16,1,0.3,1) .1s forwards;font-weight:500}
+.hero-text{display:flex;flex-direction:column;justify-content:center;padding:4rem 8% 4rem 5%;background:var(--bg)}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:1.18rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;opacity:0;animation:fadeUp .8s cubic-bezier(0.16,1,0.3,1) .1s forwards;font-weight:500}
 .hero-badge::before,.hero-badge::after{content:'';flex:1;height:1px;background:var(--gold);opacity:.5;display:inline-block;width:28px}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,5.5vw,6rem);font-weight:300;letter-spacing:-.01em;line-height:1.05;color:var(--ink);margin-bottom:1.75rem;opacity:0;animation:fadeUp .9s cubic-bezier(0.16,1,0.3,1) .2s forwards;word-break:keep-all}
 .hero h1 em{font-style:italic;color:var(--gold)}
@@ -80,7 +80,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .stat-label{font-size:.72rem;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase}
 
 /* CONCEPT */
-.concept{padding:9rem 8%;background:var(--bg);display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;border-top:1px solid var(--border)}
+.concept{padding:5rem 8%;background:var(--bg);display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:start;border-top:1px solid var(--border)}
 .concept-label{font-family:'Cormorant Garamond',serif;font-size:5rem;font-weight:300;line-height:1;color:var(--border2);letter-spacing:-.02em;position:sticky;top:7rem}
 .section-tag{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:block;font-weight:500}
 .concept-content h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;letter-spacing:-.01em;line-height:1.2;color:var(--ink);margin-bottom:2rem}
@@ -92,7 +92,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .value-item p{font-size:.8rem;color:var(--ink3);line-height:1.7}
 
 /* NOTICE */
-.notice-section{background:var(--bg3);padding:5rem 8%;border-top:1px solid var(--border)}
+.notice-section{background:var(--bg3);padding:3.5rem 8%;border-top:1px solid var(--border)}
 .notice-inner{max-width:960px;margin:0 auto}
 .notice-top{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem}
 .notice-top h3{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--ink)}
@@ -127,7 +127,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .benefit-text p{font-size:.85rem;color:var(--ink2);line-height:1.75}
 
 /* NAVER BOOKING SECTION */
-.naver-booking{background:var(--bg);padding:6rem 8%;border-top:1px solid var(--border)}
+.naver-booking{background:var(--bg);padding:4rem 8%;border-top:1px solid var(--border)}
 .naver-booking-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 .booking-info h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:1.25rem}
 .booking-info p{font-size:.9rem;color:var(--ink2);line-height:1.85;margin-bottom:2rem}
@@ -148,7 +148,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .booking-card-note{font-size:.72rem;color:var(--ink3);text-align:center;margin-top:.875rem;line-height:1.6}
 
 /* HOW TO */
-.howto{padding:9rem 8%;background:var(--bg2)}
+.howto{padding:5rem 8%;background:var(--bg2)}
 .howto-header{text-align:center;margin-bottom:5rem}
 .howto-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:300;letter-spacing:-.01em;color:var(--ink);margin-bottom:1rem}
 .howto-header p{font-size:.9rem;color:var(--ink2);max-width:440px;margin:0 auto}
@@ -161,7 +161,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .step p{font-size:.8rem;color:var(--ink3);line-height:1.75}
 
 /* LOCATION */
-.location{background:var(--bg);padding:9rem 8%;border-top:1px solid var(--border)}
+.location{background:var(--bg);padding:5rem 8%;border-top:1px solid var(--border)}
 .location-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .location-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:2rem;letter-spacing:-.01em}
 .location-info{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:3rem}
@@ -177,7 +177,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 .map-naver-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;padding:1rem;background:var(--naver);color:#fff;font-size:.875rem;font-family:Pretendard,sans-serif;font-weight:500;text-decoration:none;transition:background .2s}.map-naver-btn:hover{background:var(--naver-dk)}
 /* CTA BAND */
-.cta-band{background:var(--bg3);border-top:2px solid var(--gold2);border-bottom:2px solid var(--gold2);padding:5rem 8%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.cta-band{background:var(--bg3);border-top:2px solid var(--gold2);border-bottom:2px solid var(--gold2);padding:3.5rem 8%;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
 .cta-band h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:300;color:var(--ink);letter-spacing:-.02em;line-height:1.15}
 .cta-band h2 em{font-style:italic}
 .cta-actions{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center}
@@ -189,43 +189,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .btn-green-o:hover{background:var(--naver-dk);color:#fff;transform:translateY(-2px) scale(1.02)}
 
 
-/* GALLERY */
-.gallery{background:var(--bg);padding:9rem 8%;border-top:1px solid var(--border)}
-.gallery-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:3.5rem;gap:2rem;flex-wrap:wrap}
-.gallery-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.2;color:var(--ink);letter-spacing:-.01em}
-.gallery-header p{font-size:.85rem;color:var(--ink2);max-width:260px;line-height:1.75;text-align:right}
-.gallery-bento{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem}
-.gallery-item{position:relative;overflow:hidden;border-radius:.625rem;background:var(--bg3);border:1px solid var(--border);cursor:pointer}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(0.16,1,0.3,1)}
-.gallery-item:hover img{transform:scale(1.04)}
-.placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
-.placeholder .ph-icon{color:var(--border2)}
-.placeholder .ph-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
-.placeholder .ph-path{font-size:.62rem;color:var(--ink3);opacity:.55;font-family:monospace;margin-top:.15rem}
-.gallery-item.has-img .placeholder{display:none}
-.gi-1,.gi-2,.gi-3,.gi-4,.gi-5,.gi-6,.gi-7,.gi-8,.gi-9,.gi-10{aspect-ratio:5/7}
 
 
 
 
-
-
-
-.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,23,20,.5) 0%,transparent 60%);opacity:0;transition:opacity .4s cubic-bezier(0.16,1,0.3,1);display:flex;align-items:flex-end;padding:1.25rem}
-.gallery-overlay span{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85)}
-.gallery-item:hover .gallery-overlay{opacity:1}
-.lightbox{position:fixed;inset:0;background:rgba(10,8,6,.93);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s cubic-bezier(0.16,1,0.3,1);backdrop-filter:blur(10px)}
-.lightbox.open{opacity:1;pointer-events:all}
-.lightbox-img{max-width:90vw;max-height:88vh;object-fit:contain;border-radius:.5rem}
-.lightbox-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;width:2.5rem;height:2.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s cubic-bezier(0.16,1,0.3,1)}
-.lightbox-close:hover{background:rgba(255,255,255,.2)}
-.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:#fff;width:3rem;height:3rem;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .3s cubic-bezier(0.16,1,0.3,1)}
-.lb-nav:hover{background:rgba(255,255,255,.2)}
-.lb-prev{left:1.5rem}.lb-next{right:1.5rem}
-@media(max-width:960px){.gallery-bento{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:600px){.gallery-bento{grid-template-columns:repeat(2,1fr)}}
 /* REVIEWS */
-.reviews{background:var(--bg2);padding:9rem 8%;border-top:1px solid var(--border)}
+.reviews{background:var(--bg2);padding:5rem 8%;border-top:1px solid var(--border)}
 .reviews-header{margin-bottom:4rem}
 .reviews-header h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.2;color:var(--ink);letter-spacing:-.01em;margin-bottom:.75rem}
 .reviews-source{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.08em;color:var(--ink3);margin-top:.5rem}
@@ -296,9 +265,7 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="logo-img"><img src="data:image/jpeg;base64,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" alt="PINTO" class="logo-img-el"></a>
   <ul class="nav-menu">
-    <li><a href="#gallery">갤러리</a></li>
     <li><a href="#services">요금</a></li>
     <li><a href="#booking">예약</a></li>
     <li><a href="#howto">이용안내</a></li>
@@ -450,14 +417,6 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
   </div>
 </section>
 
-<!-- BENEFIT -->
-<div class="benefit">
-  <div class="benefit-icon"><span class="iconify" data-icon="solar:gift-bold" style="font-size:2.5rem;color:var(--gold)"></span></div>
-  <div class="benefit-text">
-    <h3>단골 혜택 — 인스타그램 팔로우 시 인화 1장 무료!</h3>
-    <p>인스타그램 <strong style="color:var(--gold2)">@pinto_daegu</strong> 팔로우 후 방문 시 알려주시면 추가 인화 1장 (5,000원 상당)을 무료로 드립니다.</p>
-  </div>
-</div>
 
 <!-- NAVER BOOKING SECTION -->
 <section id="booking" class="naver-booking">
@@ -559,125 +518,6 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
     </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="gallery">
-  <div class="gallery-header reveal">
-    <div>
-      <span class="section-tag">Studio Gallery</span>
-      <h2>핀토의<br>공간을 만나보세요</h2>
-    </div>
-    <p>이미지를 클릭하면 크게 볼 수 있습니다.</p>
-  </div>
-  <div class="gallery-bento">
-
-    <div class="gallery-item gi-1 reveal" data-src="images/gallery-01.jpg" onclick="openLightbox(0)">
-      <img src="images/gallery-01.jpg" alt="핀토 스튜디오 실내" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span>
-        <span class="ph-label">스튜디오 메인샷</span>
-        <span class="ph-path">images/gallery-01.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Studio Interior</span></div>
-    </div>
-
-    <div class="gallery-item gi-2 reveal reveal-delay-1" data-src="images/gallery-02.jpg" onclick="openLightbox(1)">
-      <img src="images/gallery-02.jpg" alt="핀토 스튜디오 촬영 공간" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span>
-        <span class="ph-label">촬영 공간</span>
-        <span class="ph-path">images/gallery-02.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Shooting Space</span></div>
-    </div>
-
-    <div class="gallery-item gi-3 reveal" data-src="images/gallery-03.jpg" onclick="openLightbox(2)">
-      <img src="images/gallery-03.jpg" alt="핀토 스튜디오 소품" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">소품 · 배경</span>
-        <span class="ph-path">images/gallery-03.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Props</span></div>
-    </div>
-
-    <div class="gallery-item gi-4 reveal reveal-delay-1" data-src="images/gallery-04.jpg" onclick="openLightbox(3)">
-      <img src="images/gallery-04.jpg" alt="핀토 스튜디오 탈의실" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">탈의실</span>
-        <span class="ph-path">images/gallery-04.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Dressing Room</span></div>
-    </div>
-
-    <div class="gallery-item gi-5 reveal reveal-delay-2" data-src="images/gallery-05.jpg" onclick="openLightbox(4)">
-      <img src="images/gallery-05.jpg" alt="핀토 스튜디오 분위기" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">공간 분위기</span>
-        <span class="ph-path">images/gallery-05.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Atmosphere</span></div>
-    </div>
-
-    <div class="gallery-item gi-6 reveal" data-src="images/gallery-06.jpg" onclick="openLightbox(5)">
-      <img src="images/gallery-06.jpg" alt="핀토 스튜디오 촬영 샘플" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span>
-        <span class="ph-label">촬영 샘플</span>
-        <span class="ph-path">images/gallery-06.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Sample Shot</span></div>
-    </div>
-
-    <div class="gallery-item gi-7 reveal reveal-delay-1" data-src="images/gallery-07.jpg" onclick="openLightbox(6)">
-      <img src="images/gallery-07.jpg" alt="핀토 스튜디오 전경" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2.5rem"></span>
-        <span class="ph-label">스튜디오 전경</span>
-        <span class="ph-path">images/gallery-07.jpg</span>
-      </div>
-      <div class="gallery-overlay"><span>Full Studio View</span></div>
-    </div>
-
-    <div class="gallery-item gi-8 reveal" data-src="images/gallery-08.jpg" onclick="openLightbox(7)">
-      <img src="images/gallery-08.jpg" alt="핀토 스튜디오 촬영 공간" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">촬영 공간</span>
-      </div>
-      <div class="gallery-overlay"><span>Studio Space</span></div>
-    </div>
-
-    <div class="gallery-item gi-9 reveal reveal-delay-1" data-src="images/gallery-09.jpg" onclick="openLightbox(8)">
-      <img src="images/gallery-09.jpg" alt="핀토 스튜디오 분위기" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">스튜디오 분위기</span>
-      </div>
-      <div class="gallery-overlay"><span>Atmosphere</span></div>
-    </div>
-
-    <div class="gallery-item gi-10 reveal reveal-delay-2" data-src="images/gallery-10.jpg" onclick="openLightbox(9)">
-      <img src="images/gallery-10.jpg" alt="핀토 스튜디오 인테리어" loading="lazy" onerror="this.style.display='none'">
-      <div class="placeholder">
-        <span class="iconify ph-icon" data-icon="solar:camera-bold" style="font-size:2rem"></span>
-        <span class="ph-label">스튜디오 인테리어</span>
-      </div>
-      <div class="gallery-overlay"><span>Interior Detail</span></div>
-    </div>
-
-
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <button class="lightbox-close" onclick="closeLightbox()"><span class="iconify" data-icon="solar:close-bold"></span></button>
-  <button class="lb-nav lb-prev" onclick="event.stopPropagation();moveLight(-1)"><span class="iconify" data-icon="solar:arrow-left-bold"></span></button>
-  <img class="lightbox-img" id="lightbox-img" src="" alt="">
-  <button class="lb-nav lb-next" onclick="event.stopPropagation();moveLight(1)"><span class="iconify" data-icon="solar:arrow-right-bold"></span></button>
-</div>
 <!-- REVIEWS -->
 <section class="reviews">
   <div class="reviews-header reveal">
@@ -893,40 +733,6 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 
 
 
-  // 갤러리 이미지 로드 체크 — 이미지가 있으면 has-img 클래스 추가
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    if(img.complete && img.naturalWidth > 0) img.closest('.gallery-item').classList.add('has-img');
-    img.addEventListener('load', () => img.closest('.gallery-item').classList.add('has-img'));
-  });
-
-  // 라이트박스
-  const galleryItems = document.querySelectorAll('.gallery-item[data-src]');
-  let currentIdx = 0;
-  const lbEl = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightbox-img');
-
-  function openLightbox(idx) {
-    currentIdx = idx;
-    const src = galleryItems[idx]?.dataset.src;
-    if(!src) return;
-    lbImg.src = src;
-    lbEl.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox(e) {
-    if(e && e.target !== lbEl && !e.target.classList.contains('lightbox-close')) return;
-    lbEl.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  function moveLight(dir) {
-    currentIdx = (currentIdx + dir + galleryItems.length) % galleryItems.length;
-    lbImg.src = galleryItems[currentIdx]?.dataset.src || '';
-  }
-  document.addEventListener('keydown', e => {
-    if(!lbEl.classList.contains('open')) return;
-    if(e.key === 'Escape') { lbEl.classList.remove('open'); document.body.style.overflow=''; }
-    if(e.key === 'ArrowLeft') moveLight(-1);
-    if(e.key === 'ArrowRight') moveLight(1);
   });
 
   // 스크롤 reveal
