@@ -126,6 +126,11 @@
 
   function saveSess(s) { ss.set(C.sKey, s); }
 
+  // ── GA4 이벤트 전송
+  function ga4(name, params) {
+    if (typeof gtag === 'function') gtag('event', name, params || {});
+  }
+
   // ── 이벤트 추적
   function track(name, data) {
     const s = getSess();
@@ -135,6 +140,8 @@
     saveSess(s);
     if (C.debug) console.log('[PintoFP] track:', name, data);
     if (C.webhookUrl) beacon({ type: 'event', visitorId: s.visitorId, name, data });
+    // GA4 연동
+    ga4(name, data);
   }
 
   // ── 스크롤 깊이 (25/50/75/90/100%)
@@ -173,7 +180,16 @@
     rules.forEach(({ sel, name }) => {
       document.querySelectorAll(sel).forEach(el => {
         el.addEventListener('click', () => {
-          track('conversion', { action: name, label: el.textContent.trim().slice(0, 30) });
+          const label = el.textContent.trim().slice(0, 30);
+          track('conversion', { action: name, label });
+          // GA4 표준 이벤트로도 전송
+          if (name === 'booking_naver' || name === 'nav_book') {
+            ga4('generate_lead', { method: 'naver_booking', event_label: label });
+          } else if (name === 'call') {
+            ga4('generate_lead', { method: 'phone_call', event_label: label });
+          } else if (name === 'navertalk') {
+            ga4('generate_lead', { method: 'naver_talk', event_label: label });
+          }
         });
       });
     });
