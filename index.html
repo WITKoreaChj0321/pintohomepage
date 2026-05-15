@@ -250,6 +250,10 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 .footer-sns{display:flex;gap:1.5rem}
 .footer-sns a{font-size:.75rem;letter-spacing:.08em;color:#5a5850;text-decoration:none;transition:color .2s}
 .footer-sns a:hover{color:var(--gold2)}
+.footer-counter{font-size:.72rem;color:#5a5850;letter-spacing:.04em}
+.footer-counter strong{color:var(--gold2);font-weight:500}
+.nav-counter{font-size:.7rem;color:var(--ink3);letter-spacing:.04em;margin-right:.25rem}
+.nav-counter [data-fp]{color:var(--gold);font-weight:500}
 
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
@@ -295,6 +299,9 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
 
 <!-- NAV -->
 <nav>
+  <a href="#" class="logo-img">
+    <img src="pintoLogo_BK.jpg" class="logo-img-el" alt="PINTO">
+  </a>
   <ul class="nav-menu">
     <li><a href="#services">요금</a></li>
     <li><a href="#gallery">갤러리</a></li>
@@ -302,6 +309,11 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
     <li><a href="#howto">이용안내</a></li>
     <li><a href="#location">오시는길</a></li>
   </ul>
+  <div class="nav-actions">
+    <span class="nav-counter">오늘 <span data-fp="daily">-</span>명</span>
+    <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" class="nav-book">네이버 예약</a>
+    <button class="nav-talk" onclick="openNaverTalk()">톡톡 문의</button>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -779,6 +791,7 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
   </div>
   <div class="footer-bottom">
     <p>© 2026 PINTO 셀프사진관. All rights reserved.</p>
+    <div class="footer-counter">오늘 <strong data-fp="daily">-</strong>명 · 누적 <strong data-fp="total">-</strong>명</div>
     <div class="footer-sns">
       <a href="https://www.instagram.com/pinto_daegu/" target="_blank">@pinto_daegu</a>
       <a href="https://booking.naver.com/booking/6/bizes/608782" target="_blank" style="color:#5aaa7a">네이버 예약</a>
@@ -852,6 +865,6 @@ footer{background:#2a2520;padding:4rem 8% 3rem;display:grid;grid-template-column
   }, {threshold: 0.1});
   els.forEach(el => io.observe(el));
 </script>
-
+<script src="analytics.js"></script>
 </body>
 </html>
