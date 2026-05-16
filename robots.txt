@@ -4,4 +4,4 @@ Allow: /
 User-agent: Yeti
 Allow: /
 
-Sitemap: https://pintostudio.netlify.app/sitemap.xml
+Sitemap: https://witkoreachj0321.github.io/pintohomepage/sitemap.xml
