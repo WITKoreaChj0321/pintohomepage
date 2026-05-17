@@ -208,42 +208,40 @@
     ls.set(C.vKey, visitor);
   }
 
-  // ── 방문자 카운터 (countapi.xyz)
+  // ── 방문자 카운터 (counterapi.dev)
   async function fetchCounter() {
     const dateKey = today();
     const alreadyHit = ss.get(C.hitKey);
-    const baseUrl = 'https://api.countapi.xyz';
+    const base = 'https://api.counterapi.dev/v1';
+    const ns = C.ns;
 
     try {
       let daily, total;
 
       if (!alreadyHit) {
-        // 신규 세션: hit 호출 (카운트 증가)
         const [dRes, tRes] = await Promise.all([
-          fetch(`${baseUrl}/hit/${C.ns}/d${dateKey}`),
-          fetch(`${baseUrl}/hit/${C.ns}/total`)
+          fetch(`${base}/${ns}/d${dateKey}/up`),
+          fetch(`${base}/${ns}/total/up`)
         ]);
         const dData = await dRes.json();
         const tData = await tRes.json();
-        daily = dData.value;
-        total = tData.value;
+        daily = dData.count;
+        total = tData.count;
         ss.set(C.hitKey, true);
       } else {
-        // 기존 세션: get 호출 (카운트 조회만)
         const [dRes, tRes] = await Promise.all([
-          fetch(`${baseUrl}/get/${C.ns}/d${dateKey}`),
-          fetch(`${baseUrl}/get/${C.ns}/total`)
+          fetch(`${base}/${ns}/d${dateKey}`),
+          fetch(`${base}/${ns}/total`)
         ]);
         const dData = await dRes.json();
         const tData = await tRes.json();
-        daily = dData.value;
-        total = tData.value;
+        daily = dData.count;
+        total = tData.count;
       }
 
       ls.set(C.cntKey, { daily, total, date: dateKey, ts: now() });
       renderCounter(daily, total);
     } catch {
-      // API 실패 시 캐시 사용
       const cache = ls.get(C.cntKey);
       if (cache) renderCounter(cache.daily, cache.total);
     }
